@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "Signsetta_Mobile",
+    "slug": "Signsetta_Mobile",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "Signsetta_Mobile"
+}
