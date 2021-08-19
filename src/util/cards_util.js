@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-
+// https://signsetta.herokuapp.com
 export const getCards = () => {
     return axios.get(`/api/cards`)
 }

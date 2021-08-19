@@ -1,5 +1,5 @@
 import axios from "axios";
-
+//https://signsetta.herokuapp.com
 export const getAllUsers = () => {
     return axios.get("/api/users/all");
 };
