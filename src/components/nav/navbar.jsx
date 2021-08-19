@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import '../../index';
+import '../../../index';
 import logo from '../../images/mern-logo-1.png';
 import './navbar.css';
 import SearchContainer from '../search/search_bar_container';
