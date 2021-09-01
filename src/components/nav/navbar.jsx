@@ -21,92 +21,92 @@ class NavBar extends React.Component {
     getLinks() {
         if (this.props.loggedIn) {
             return (
-                <div className="right menu" >
+                <View className="right menu" >
 
-                    <div className="ui item category search" style={{ border:'none' }}>
-                        <div className="search-bar"><SearchContainer /> </div>
-                    </div>
-                        {/* <div class="ui divider"></div> */}
+                    <View className="ui item category search" style={{ border:'none' }}>
+                        <View className="search-bar"><SearchContainer /> </View>
+                    </View>
+                        {/* <View class="ui Viewider"></View> */}
 
-                    <div id="aboutus" className="ui item">
+                    <View id="aboutus" className="ui item">
                         <Link to={'/about'} className="" style={{ color: 'black' }}>
-                            <div>
+                            <View>
                                 {/* <i className="icon users"></i> */}
                                 About Signsetta
-                            </div>
+                            </View>
                         </Link>
-                    </div>
+                    </View>
 
-                    <div className="item" >
+                    <View className="item" >
                         <Link to={'/fingerspelling-game'}>
-                            <div className="ui button pink">Fingerspelling Practice</div>
+                            <View className="ui button pink">Fingerspelling Practice</View>
                         </Link>
-                    </div>
+                    </View>
 
-                    <div className="item" >
-                        <Link to={'/translator'}><div className="ui button green">Translator</div></Link>
-                    </div>
+                    <View className="item" >
+                        <Link to={'/translator'}><View className="ui button green">Translator</View></Link>
+                    </View>
 
-                    <div className="item" >
+                    <View className="item" >
                         <Link to={'/profile'}>
-                            <div className=" ui button violet">Profile</div>
+                            <View className=" ui button violet">Profile</View>
                         </Link>
-                    </div>
+                    </View>
 
-                    <div className="item" >
+                    <View className="item" >
                         <Link to={'/cards'}>
-                            <div className=" ui button blue">
+                            <View className=" ui button blue">
                                 Cards
-                            </div>
+                            </View>
                         </Link>
-                    </div>
+                    </View>
 
-                    <div className="item" >
-                        <div className=" ui button teal" onClick={this.logoutUser}>
+                    <View className="item" >
+                        <View className=" ui button teal" onClick={this.logoutUser}>
                             Logout
-                        </div>
-                    </div>
-                </div>
+                        </View>
+                    </View>
+                </View>
             );
         } else {
             return (
 
-                <div className="right menu" >
+                <View className="right menu" >
 
-                    <div className="ui item category search" style={{ border: 'none' }}>
-                        <div className="search-bar"><SearchContainer /> </div>
-                    </div>
-                    {/* <div class="ui divider"></div> */}
+                    <View className="ui item category search" style={{ border: 'none' }}>
+                        <View className="search-bar"><SearchContainer /> </View>
+                    </View>
+                    {/* <View class="ui Viewider"></View> */}
 
 
-                    <div id="aboutus" className="ui item" >{/*remove ui compact menu*/}
+                    <View id="aboutus" className="ui item" >{/*remove ui compact menu*/}
                         <Link to={'/about'} style={{ color: 'black' }}>
-                            <div>
+                            <View>
                                 <i className="icon users"></i>
                                 About Us
-                            </div>
+                            </View>
                         </Link>
-                    </div>
+                    </View>
 
-                    <div className="item" >
-                        <Link to={'/translator'}><div className="ui button green">Translator</div></Link>
-                    </div>
+                    <View className="item" >
+                        <Link to={'/translator'}><View className="ui button green">Translator</View></Link>
+                    </View>
 
-                    <div className="item" >
+                    <View className="item" >
                         <Link to={'/cards'}>
-                            <div className=" ui button blue">
+                            <View className=" ui button blue">
                                 Cards
-                            </div>
+                            </View>
                         </Link>
-                    </div>
+                    </View>
 
-                    <div className="item" >
-                        <Link to={'/login'}><div className=" ui button teal">Login</div></Link>
-                    </div>
-                    <div className="item" >
-                        <Link to={'/signup'}><div className="ui button pink">Get Started</div></Link>
-                    </div>
-                </div>
+                    <View className="item" >
+                        <Link to={'/login'}><View className=" ui button teal">Login</View></Link>
+                    </View>
+                    <View className="item" >
+                        <Link to={'/signup'}><View className="ui button pink">Get Started</View></Link>
+                    </View>
+                </View>
             );
         }
     }
@@ -114,13 +114,13 @@ class NavBar extends React.Component {
     render() {
 
         return (
-            <div className="ui stackable menu">
+            <View className="ui stackable menu">
                 <Link to="/">
-                    <img src={logo} className="image" alt="logo" />
+                    <Image src={logo} className="image" alt="logo" />
                 </Link>
                 { this.getLinks()}
 
-            </div>
+            </View>
 
         )
 
