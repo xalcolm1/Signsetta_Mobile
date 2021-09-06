@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import { View, Image, Text, StyleSheet } from 'react-native'
 import '../../../index';
 import logo from '../../images/mern-logo-1.png';
-import './navbar.css';
-import SearchContainer from '../search/search_bar_container';
+
+// import SearchContainer from '../search/search_bar_container';
 
 class NavBar extends React.Component {
     constructor(props) {
@@ -21,52 +22,58 @@ class NavBar extends React.Component {
     getLinks() {
         if (this.props.loggedIn) {
             return (
-                <View className="right menu" >
+                <Row className="right menu" >
 
                     <View className="ui item category search" style={{ border:'none' }}>
-                        <View className="search-bar"><SearchContainer /> </View>
+                        {/* <View className="search-bar"><SearchContainer /> </View> */}
                     </View>
                         {/* <View class="ui Viewider"></View> */}
 
                     <View id="aboutus" className="ui item">
-                        <Link to={'/about'} className="" style={{ color: 'black' }}>
+                        {/* <Link to={'/about'} className="" style={{ color: 'black' }}> */}
                             <View>
                                 {/* <i className="icon users"></i> */}
-                                About Signsetta
+                                <Text>About Signsetta</Text>
+                                
                             </View>
-                        </Link>
+                        {/* </Link> */}
                     </View>
 
                     <View className="item" >
-                        <Link to={'/fingerspelling-game'}>
-                            <View className="ui button pink">Fingerspelling Practice</View>
-                        </Link>
+                        {/* <Link to={'/fingerspelling-game'}> */}
+                                
+                            <View className="ui button pink"><Text>Fingerspelling Practice</Text></View>
+                        {/* </Link> */}
                     </View>
 
                     <View className="item" >
-                        <Link to={'/translator'}><View className="ui button green">Translator</View></Link>
+                        {/* <Link to={'/translator'}><View className="ui button green">Translator</View></Link> */}
                     </View>
 
                     <View className="item" >
-                        <Link to={'/profile'}>
-                            <View className=" ui button violet">Profile</View>
-                        </Link>
+                        {/* <Link to={'/profile'}> */}
+                            <View className=" ui button violet">
+                                <Text>Profile</Text>                                
+                            </View>
+                        {/* </Link> */}
                     </View>
 
                     <View className="item" >
-                        <Link to={'/cards'}>
+                        {/* <Link to={'/cards'}> */}
                             <View className=" ui button blue">
-                                Cards
+                                 
+                                <Text>Cards</Text>
+
                             </View>
-                        </Link>
+                        {/* </Link> */}
                     </View>
 
                     <View className="item" >
                         <View className=" ui button teal" onClick={this.logoutUser}>
-                            Logout
+                            <Text>Logout</Text>
                         </View>
                     </View>
-                </View>
+                </Row>
             );
         } else {
             return (
@@ -74,37 +81,38 @@ class NavBar extends React.Component {
                 <View className="right menu" >
 
                     <View className="ui item category search" style={{ border: 'none' }}>
-                        <View className="search-bar"><SearchContainer /> </View>
+                        {/* <View className="search-bar"><SearchContainer /> </View> */}
                     </View>
                     {/* <View class="ui Viewider"></View> */}
 
 
                     <View id="aboutus" className="ui item" >{/*remove ui compact menu*/}
-                        <Link to={'/about'} style={{ color: 'black' }}>
+                        {/* <Link to={'/about'} style={{ color: 'black' }}> */}
                             <View>
-                                <i className="icon users"></i>
-                                About Us
+                                <View className="icon users"></View>
+                                <Text>About Us</Text>
                             </View>
-                        </Link>
+                        {/* </Link> */}
                     </View>
 
                     <View className="item" >
-                        <Link to={'/translator'}><View className="ui button green">Translator</View></Link>
+                        {/* <Link to={'/translator'}><View className="ui button green">Translator</View></Link> */}
                     </View>
 
                     <View className="item" >
-                        <Link to={'/cards'}>
+                        {/* <Link to={'/cards'}> */}
                             <View className=" ui button blue">
-                                Cards
+                                <Text>Cards</Text>
+                                
                             </View>
-                        </Link>
+                        {/* </Link> */}
                     </View>
 
                     <View className="item" >
-                        <Link to={'/login'}><View className=" ui button teal">Login</View></Link>
+                        {/* <Link to={'/login'}><View className=" ui button teal">Login</View></Link> */}
                     </View>
                     <View className="item" >
-                        <Link to={'/signup'}><View className="ui button pink">Get Started</View></Link>
+                        {/* <Link to={'/signup'}><View className="ui button pink">Get Started</View></Link> */}
                     </View>
                 </View>
             );
@@ -115,9 +123,9 @@ class NavBar extends React.Component {
 
         return (
             <View className="ui stackable menu">
-                <Link to="/">
+                {/* <Link to="/"> */}
                     <Image src={logo} className="image" alt="logo" />
-                </Link>
+                {/* </Link> */}
                 { this.getLinks()}
 
             </View>
