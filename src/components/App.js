@@ -1,4 +1,5 @@
 import React from 'react';
+import { View, Text } from 'react-native';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import NavBarContainer from './nav/navbar_container.js';
@@ -22,8 +23,9 @@ import NavBarContainer from './nav/navbar_container.js';
 const App = () => (
   <View>
     <NavBarContainer />
+    {/* 
     <Switch>
-      {/* <Route exact path="/about" component={About} />
+      <Route exact path="/about" component={About} />
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
       <Route exact path="/translator" component={TranslatorContainer} />
@@ -37,9 +39,10 @@ const App = () => (
       <ProtectedRoute exact path="/profile" component={ProfileContainer} />
       <ProtectedRoute exact path="/card-review" component={CardReviewContainer} />
       <AuthRoute exact path="/" component={SplashComponent} />
-      <Redirect to="/" /> */}
+      <Redirect to="/" /> 
 
     </Switch>
+    */}
   </View>
 );
 
